@@ -1,0 +1,163 @@
+body {  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #fffcfc;
+}
+
+button {
+  cursor: pointer;
+}
+
+.d__none {
+  display: none;
+}
+
+.container {
+  width: 900px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+}
+
+.root {
+  position: absolute;
+  width:900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 8px;
+  background: rgb(234, 234, 235);
+}
+/* timeline */
+.timeline {
+  margin: 66px;
+}
+
+.timeline__item {
+  background: white;
+  margin: 15px;
+  padding: 10px;
+}
+
+.timeline__item__data {
+  text-align: right;
+}
+
+.timeline__item__content {
+  margin: 8px 0;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  margin-left: 13px;
+  position: relative;
+  top: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../img/icon-eye.png');
+}
+
+/* form */
+.form {
+  margin: 12px;  
+  background: white;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.form__actions {
+  height: 48px;
+}
+
+.form__input {
+  margin: 16px;
+  outline:none;
+  width: 86%;
+  border: none;
+}
+
+.form__input:hover {
+  border: none;
+}
+
+.form__media {
+  display: flex;
+  position: relative;
+  width: 80px;
+  top: -45px;
+  right: -788px;
+  text-align: right; 
+}
+
+.microfon {  
+  width: 28px;
+  height: 28px;
+  margin: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-image: url('../img/microphone.png');  
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.camera { 
+  width: 28px;
+  height: 28px;
+  margin: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-image: url('../img/camera.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.microfon:hover, .camera:hover {
+  background-color: rgb(146, 253, 146);
+}
+
+/* popup */
+.popup { 
+  position: absolute; 
+  width: 600px;
+  margin: 38px;
+  padding: 41px;
+  border-radius: 5px;
+  border: 1px solid;
+  background: white;
+  z-index: 1;
+}
+
+.popup__form {
+  margin-top: 33px;
+}
+
+.popup__input {
+  width:96%;
+  margin: 11px 0;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.popup__btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 87px;
+  margin-left: 28px; 
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background:rgb(5, 167, 5);
+  color: white;
+  border: rgb(49, 131, 93);
+}
+

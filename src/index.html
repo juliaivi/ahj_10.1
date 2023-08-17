@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popovers</title>
+</head>
+<body>
+    <div class="container">
+       <div class="root">
+            <div class="timeline">
+            </div>
+
+            <form class="form">
+                <div class="form__actions">
+                    <!-- <video class="form__preview__video d__none"></video> -->
+                    <input class="form__input"  type="text" placeholder="Введите сообщение" required>
+            
+                    <div class="form__media">
+                        <span class="form__microfon">
+                            <img class="microfon">
+                        </span>
+                        <span class="form__camera">
+                            <img class="camera">
+                        </span>
+                    </div>
+                    <div class="form__record">
+                        <span class="form__btn-ok"></span>
+                        <span class="form__timer"></span>
+                        <span class="form__btn-close"></span>
+                    </div>  
+                </div>
+            </form>
+       </div>
+
+       <div class="popup d__none">
+           <h3 class="popup__title">Что-то пошло не так</h3>
+           <div class="popup__discrition">К сожалению нам не удалось определить ваше местоположение. Пожалуйста дайте согласие на использование геолокации, либо введите координаты вручную.</div>
+            <form class="popup__form"></form>
+                <label class="popup__label">
+                    <div class="popup__text">Широта и долгота через запятую:</div>
+                    <input class="popup__input" placeholder="Введите координаты" type="text" required>
+                </label>
+                <div class="popup__btns">
+                    <button class="btn btn__ok">ok</button>
+                    <button class="btn btn__cansel">отмена</button>
+                </div>
+            </form>
+       </div>
+    </div>
+    
+</body>
+</html>
