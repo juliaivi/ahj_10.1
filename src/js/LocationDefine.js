@@ -35,7 +35,7 @@ export default class LocationDefine {
     this.formInputValue = this.formInput.value.trim();
     const inputValue = this.popupInput.value;
     const checkInputValue = checkValue(inputValue);
-    if (e.target.classList.contains('btn__ok')) {
+    if (e.target.classList.contains('btn__ok') && this.formInputValue !== '') {
       this.checkOk(checkInputValue);
     }
 
@@ -64,6 +64,10 @@ export default class LocationDefine {
       if (this.formInputValue) {
         creatTimeline(this.formInputValue, this.latitude, this.longitude);
         this.formInput.value = '';
+        this.latitude = null;
+        this.longitude = null;
+        this.popupTitle.textContent = dataPopup.errorCoords.text;
+        this.popupDiscrition.textContent = dataPopup.errorCoords.discrition;
       }
     } else {
       this.popupTitle.textContent = dataPopup.error.text;

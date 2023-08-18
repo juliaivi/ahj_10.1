@@ -11,7 +11,6 @@ export default class Geolocation {
 
   init() {
     this.locationDefine = new LocationDefine();
-    this.locationDefine.locate();
     this.form.addEventListener('submit', (e) => this.onSubmit(e));
   }
 
@@ -19,6 +18,7 @@ export default class Geolocation {
     e.preventDefault();
     const inputValue = this.formInput.value.trim();
     if (inputValue) {
+      this.locationDefine.locate();
       if (this.locationDefine.latitude && this.locationDefine.longitude) {
         creatTimeline(inputValue, this.locationDefine.latitude, this.locationDefine.longitude);
         this.formInput.value = '';
