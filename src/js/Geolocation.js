@@ -22,7 +22,7 @@ export default class Geolocation {
       if (this.locationDefine.latitude && this.locationDefine.longitude) {
         creatTimeline(inputValue, this.locationDefine.latitude, this.locationDefine.longitude);
         this.formInput.value = '';
-      } else if (this.popup.classList.contains('d__none')) {
+      } else if (this.popup.classList.contains('d__none') && this.locationDefine.geo) {
         this.popup.classList.remove('d__none');
       }
     }

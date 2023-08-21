@@ -13,6 +13,7 @@ export default class LocationDefine {
     this.popupDiscrition = document.querySelector('.popup__discrition');
     this.popupBtns = document.querySelector('.popup__btns');
     this.formInput = document.querySelector('.form__input');
+    this.geo = false;
   }
 
   locate() {
@@ -20,6 +21,12 @@ export default class LocationDefine {
       navigator.geolocation.getCurrentPosition((data) => {
         this.latitude = data.coords.latitude;
         this.longitude = data.coords.longitude;
+        const inputValue = this.formInput.value.trim();
+        this.geo = true;
+        if (inputValue) {
+          creatTimeline(inputValue, this.latitude, this.longitude);
+          this.formInput.value = '';
+        }
       }, (err) => {
         if (this.popup.classList.contains('d__none')) {
           this.popup.classList.remove('d__none');
